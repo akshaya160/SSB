@@ -52,18 +52,46 @@ Model Waveform
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
 Program
+```
+am1=3.2;
+ac1=6.4;
+fm1=154;
+fc1=1540;
+fs1=15400;
+t1=0:1/fs1:2/fm1;
+em1=am1*cos(2*3.14*fm1*t1);
+subplot(4,1,1);
+plot(t1,em1);
+ec1=ac1*cos(2*3.14*fc1*t1);
+subplot(4,1,2);
+plot(t1,ec1);
+eam1=ac1*(1+(em1/ac1)).*cos(2*3.14*fc1*t1);
+eam2=ac1*(-1+(em1/ac1)).*cos(2*3.14*fc1*t1);
+edsbsc1=eam1+eam2;
+am2=3.2;
+ac2=6.4;
+fm2=154;
+fc2=1540;
+fs2=15400;
+t2=0:1/fs2:2/fm2;
+em2=am2*sin(2*3.14*fm2*t2);
+ec2=ac2*sin(2*3.14*fc2*t2);
+eam3=ac2*(1+(em2/ac2)).*sin(2*3.14*fc2*t2);
+eam4=ac2*(-1+(em2/ac2)).*sin(2*3.14*fc2*t2);
+edsbsc2=eam3+eam4;
+elsb=edsbsc1 - edsbsc2;
+subplot(4,1,3);
+plot(t,elsb);
+eusb=edsbsc1 + edsbsc2;
+subplot(4,1,4);
+plot(t,eusb);
+```
 
 OUTPUT WAVEFORM
 
 TABULATION
 
-
-
-
-
-
-
-
+<img width="1280" height="722" alt="image" src="https://github.com/user-attachments/assets/2994bbc9-e455-42e6-8379-0f7719992bda" />
 
 RESULT:
 
