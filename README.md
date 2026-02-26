@@ -89,6 +89,8 @@ plot(t,eusb);
 
 OUTPUT WAVEFORM
 
+<img width="1917" height="1198" alt="image" src="https://github.com/user-attachments/assets/5883d783-894f-4782-b61e-dd4dbebb419c" />
+
 TABULATION
 
 <img width="1280" height="722" alt="image" src="https://github.com/user-attachments/assets/2994bbc9-e455-42e6-8379-0f7719992bda" />
